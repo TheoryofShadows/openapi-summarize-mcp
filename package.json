@@ -1,0 +1,47 @@
+{
+  "name": "@mcpx-digital/openapi-summarize",
+  "version": "0.1.0",
+  "description": "MCP server to load local OpenAPI/Swagger specs, summarize endpoints by tag, find missing auth, list deprecated ops, and generate agent-friendly cheat sheets. Local files only.",
+  "type": "module",
+  "bin": {
+    "openapi-summarize-mcp": "./index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "files": [
+    "index.js",
+    "lib.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "yaml": "^2.5.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openapi",
+    "swagger",
+    "api",
+    "mcpx"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheoryofShadows/openapi-summarize-mcp.git"
+  },
+  "homepage": "https://github.com/TheoryofShadows/openapi-summarize-mcp#readme",
+  "author": "TheoryofShadows",
+  "bugs": {
+    "url": "https://github.com/TheoryofShadows/openapi-summarize-mcp/issues"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "Petstore", "version": "1.0.0", "description": "Sample Petstore API for tests." },
+  "servers": [{ "url": "https://example.com/api" }],
+  "security": [{ "ApiKeyAuth": [] }],
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": { "type": "apiKey", "in": "header", "name": "X-API-Key" }
+    }
+  },
+  "paths": {
+    "/pets": {
+      "get": {
+        "tags": ["pets"],
+        "operationId": "listPets",
+        "summary": "List pets",
+        "responses": { "200": { "description": "ok" } }
+      },
+      "post": {
+        "tags": ["pets"],
+        "operationId": "createPet",
+        "summary": "Create pet",
+        "responses": { "201": { "description": "created" } }
+      }
+    },
+    "/pets/{id}": {
+      "get": {
+        "tags": ["pets"],
+        "operationId": "getPet",
+        "summary": "Get pet",
+        "deprecated": true,
+        "responses": { "200": { "description": "ok" } }
+      },
+      "delete": {
+        "tags": ["pets"],
+        "operationId": "deletePet",
+        "security": [],
+        "responses": { "204": { "description": "gone" } }
+      }
+    },
+    "/health": {
+      "get": {
+        "tags": ["meta"],
+        "operationId": "health",
+        "security": [],
+        "summary": "Health check",
+        "responses": { "200": { "description": "ok" } }
+      }
+    }
+  }
+}
